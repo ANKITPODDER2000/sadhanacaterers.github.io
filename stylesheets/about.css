@@ -1,0 +1,733 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins|Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Herr+Von+Muellerhoff&display=swap');
+*{
+	padding: 0;
+	margin: 0;
+}
+body,html{
+	position: relative;
+	width: 100%;
+	overflow-x: hidden;
+}
+header{
+	position: sticky;
+	min-width: 100%;
+	height: 100vh;
+	background: #afada8;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+header::after{
+	position: absolute;
+	content: '';
+	width: 30%;
+	height: 100%;
+	background: #ffc107;
+	right: 0;
+	top: 0;
+	z-index: -1;
+}
+header::before{
+	position: absolute;
+	content: '';
+	width: 30%;
+	height: 100%;
+	background: #cdcbc5;
+	left: 0;
+	top: 0;
+}
+header .container{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: row;
+}
+header .container .box1{
+	width: 500px;
+	max-height: 100%;
+	padding-top: 100px;
+}
+header .container .box1 h1{
+	font-size: 45px;
+	font-family: 'Poppins', sans-serif;
+	color: #f7f7f7cf;
+	margin-bottom: 10px;
+}
+header .container .box1 h1 span{
+	font-size: 60px;
+	letter-spacing: 6px;
+	color: white;
+	font-family: 'Russo One', sans-serif;
+}
+header .container .box1 h1:nth-child(1){
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+header .container .box1 h1:nth-child(2){
+	position: relative;
+	left: 80px;
+	margin-bottom: 100px;
+}
+header .container .box1 .item{
+	position: relative;
+	width: 460px;
+	height: 200px;
+}
+header .container .box1 .item .box{
+	position: relative;
+	width: 360px;
+	height: 200px;
+	background: #fff;
+	flex-direction: row;
+	display: flex;
+	overflow: hidden;
+}
+header .container .box1 .item .box .inner{
+	min-width: 100%;
+	height: 100%;
+	float: left;
+	position: relative;
+	left: 0%;
+	background: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.5s;
+}
+header .container .box1 .item .box .inner p{
+	position: relative;
+	text-align: center;
+	padding: 0 30px;
+}
+header .container .box1 .item .recipe{
+	min-width: 200px;
+	height: 70px;
+	background: #ffc107;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 100%;
+	left: 80px;
+	transform: translate(0,-50%);
+}
+header .container .box1 .item .recipe i{
+	margin-left: 80px;
+	cursor: pointer;
+}
+header .container .box1 .item .count{
+	position: absolute;
+	top: 80%;
+	left: 86%;
+	width: 130px;
+	height: 60px;
+}
+header .container .box1 .item .count .first{
+	font-size: 40px;
+	font-family: 'Poppins', sans-serif;
+}
+header .container .box1 .item .count .last{
+	font-size: 16px;
+	opacity: 0.4;
+	margin-left: 20px;
+}
+header .container .box1 .item .count i{
+	font-size: 20px;
+	transform: scaleX(1.8);
+	opacity: 0.6;
+	margin-left: 15px;
+}
+header .container .box1 .item .icon{
+	position: absolute;
+	width: 100px;
+	height: 45px;
+	left: 360px;
+	top: 0;
+	display: flex;
+	flex-direction: row;
+}
+header .container .box1 .item .icon .icon1,
+header .container .box1 .item .icon .icon2{
+	width: 50px;
+	height: 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+	cursor: pointer;
+}
+header .container .box1 .item .icon .icon1{
+	background: #ffc107;
+}
+header .container .box1 .item .icon .icon2{
+	background: #949494;
+	color: white;
+}
+
+header .container .box2{
+	width: 500px;
+	height: 100%;
+	position: relative;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+header .container .box2 img{
+	position: relative;
+	width: 130%;
+	left: -50px;
+}
+header .contact{
+	position: absolute;
+	right: 0;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border-radius: 20px;
+}
+header .contact a{
+	text-decoration: none;
+	width: 40px;
+	height: 40px;
+	background: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 1px solid rgba(0,0,0,.3);
+	color: black;
+}
+
+					/*=======Responsive header=========*/
+@media screen and (max-width: 1435px){
+	body > header > div.container > div.box1 > h1{
+		font-size: 24px;
+	}
+	body > header > div.container > div.box1 > h1 > span{
+		font-size: 45px;
+	}
+	body > header > div.container > div.box2 > img{
+		width: 500px;
+	}
+	body > header > div.container > div.box1 > div{
+		transform: scale(0.9);
+	}
+}
+@media screen and (max-width: 1140px){
+	body > header > div.container > div.box1{
+		margin-left: 50px;
+	}
+	body > header > div.container > div.box1 > h1{
+		font-size: 21px;
+	}
+	body > header > div.container > div.box1 > h1 > span{
+		font-size: 38px;
+	}
+	body > header > div.container > div.box2 > img{
+		width: 420px;
+	}
+	body > header > div.container > div.box1 > div{
+		transform: scale(0.9);
+	}
+}
+@media screen and (max-width: 1000px){
+	header::before{
+		width: 0;
+	}
+	body > header > div.container > div.box1 > h1 > span{
+		font-size: 30px;
+	}
+	body > header > div.container > div.box1 > h1:nth-child(1){
+		position: absolute;
+		top: 50px;
+		left: 30px;
+		font-size: 18px;
+		z-index: 99999;
+	}
+	body > header > div.container > div.box1 > h1:nth-child(2){
+		position: absolute;
+		top: 120px;
+		left: 50px;
+		font-size: 18px;
+		z-index: 99999;
+	}
+	body > header > div.container > div.box2 > img{
+		position: relative;
+		margin-top: -150px;
+	}
+	body > header > div.container > div.box1{
+		margin-top: 280px;
+	}
+}
+@media screen and (max-width: 955px){
+	body > header > div.container{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column-reverse;
+	}
+	body > header > div.container > div.box1{
+		width: 80%;
+		height: 300px;
+		margin: 40px 0 0 0;
+		padding: 0;
+		height: 250px;
+	}
+	body > header > div.container > div.box2{
+		position: relative;
+		width: 80%;
+		height: 250px;
+		z-index: 9999;
+		height: 300px;
+		margin: 80px 0 0 0;
+		display: block;
+	}
+	body > header > div.container > div.box2 img{
+		position: absolute;
+	    left: calc(100% - 400px);
+		bottom: 0;
+		width: 350px;
+		z-index: -1;
+	}
+}
+@media screen and (max-width: 678px){
+	header .container .box1 .item .icon .icon1{
+		background: #ff9c07;
+	}
+}
+@media screen and (max-width: 570px){
+	body > header > div.container > div.box1 > div.item{
+		position: absolute;
+		left: 0;
+		right: 0;
+		transform: scale(0.7);
+	}
+	body > header > div.container > div.box2 > img{
+		width: 320px;
+		position: absolute;
+		left: 40px;
+	}
+	header::after{
+		clip-path: polygon(48% 1%, 100% 0%, 100% 100%, 0% 100%);
+		width: 60%;
+	}
+}
+@media screen and (max-width: 460px){
+	body > header > div.container > div.box1 > div.item{
+		position: absolute;
+		left: 0;
+		right: 0;
+		transform: scale(0.7) translateX(-79px);
+	}
+	body > header > div.container > div.box2 > img{
+		width: 270px;
+		position: absolute;
+		left: 0px;
+	}
+	header .container .box1 .item .icon{
+		left: 0;
+		top: -45px;
+	}
+	body > header > div.container > div.box1 > div.item > div.count{
+		top: -45px;
+		left: 130px;
+	}
+	body > header > div.container > div.box1 > div.item > div.recipe{
+		background: orange;
+	}
+}
+@media screen and (max-width: 363px){
+	body > header > div.container > div.box1 > div.item{
+		transform: scale(0.7) translate(-81px, 10px);
+	}
+}
+
+/*=======================================================================================*/
+
+
+
+
+.aboutus{
+	background: #fff;
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.aboutus .container{
+	width: 80%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: row;
+}
+.aboutus .container .box1{
+	width: 400px;
+	height: 600px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+}
+.aboutus .container .box1 h2{
+	font-family: 'Herr Von Muellerhoff', cursive;
+	font-size: 80px;
+	color: #dac242;
+}
+.aboutus .container .box1 h2::first-letter{
+	font-size: 160px;
+}
+.aboutus .container .box1 h3{
+	position: relative;
+	top: -40px;
+	font-size: 35px;
+	font-family: monospace;
+	letter-spacing: 3px;
+}
+.aboutus .container .box1 p{
+	font-size: 19px;
+	line-height: 24px;
+	font-family: inherit;
+}
+.aboutus .container .box1 a{
+	margin-top: 25px;
+	font-family: consolas;
+	letter-spacing: 3px;
+	color: #dac242;
+	text-decoration: none;
+	font-size: 24px;
+}
+.aboutus .container  .box2{
+	width: 500px;
+	height: 600px;
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+.aboutus .container .box2 img{
+	position: absolute;
+	width: 100%;
+	object-fit: contain;
+}
+					/*============Responsive AboutUs=================*/
+					/*============Responsive AboutUs=================*/
+@media screen and (max-width: 1290px){
+	.aboutus{
+		margin-top: 60px;
+	}
+	.aboutus .container{
+		flex-direction: column;
+	}
+	body > section.aboutus{
+		margin-bottom: 80px;
+	}
+	body > section.aboutus > div.container > div.box1{
+		position: relative;
+		width: 100%;
+		margin-bottom: 80px;
+	}
+}
+@media screen and (max-width: 700px){
+	.aboutus .container .box1 h2{
+		font-size: 60px;
+	}
+	.aboutus .container .box1 h2::first-letter{
+		font-size: 90px;
+	}
+	.aboutus .container .box1 h3{
+		font-size: 24px;
+		top: -20px;
+	}
+}
+@media screen and (max-width: 550px){
+	.aboutus .container  .box2{
+		width: 320px;
+	}
+}
+@media screen and (max-width: 1300px){
+	.aboutus .container .box2{
+		width: 350px;
+	}
+}
+@media screen and (max-width: 500px){
+	body > section.aboutus{
+		margin: 0;
+	}
+	.aboutus .container{
+		width: 90%;
+	}
+	body > section.aboutus > div.container > div.box1{
+		margin-bottom: 0px;
+	}
+	.aboutus .container .box1 h2{
+		font-family: consolas;
+		font-size: 22px;
+		margin-bottom: 18px;
+	}
+	.aboutus .container .box1 h2::first-letter{
+		font-size: 44px;
+	}
+	.aboutus .container .box1 h3{
+		font-size: 19px;
+	}
+	.aboutus .container .box1 p{
+		font-size: 14px;
+	}
+}
+@media screen and (max-width: 380px){
+	.aboutus .container .box2{
+		width: 250px;
+	}
+}
+@media screen and (max-width: 290px){
+	.aboutus .container .box2{
+		width: 200px;
+	}
+}
+
+/*======================================Chef======================================*/
+.chef{
+	background: #fff;
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.chef .innerbox{
+	width: 80%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.chef .innerbox .box1,
+.chef .innerbox .box2{
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.chef .innerbox .box1 .img{
+	width: 400px;
+	height: 400px;
+	position: relative;
+	background-color: yellow;
+	z-index: 1;
+	display: block;
+	transform-style: preserve-3d;
+}
+.chef .innerbox .box1 .img::before{
+	content: '';
+	width: calc(100% - 20px);
+	position: absolute;
+	height: calc(100% - 20px);
+	left: 35px;
+	top: 35px;
+	background: white;
+ 	transform: translateZ(-1px);
+}
+.chef .innerbox .box1 .img::after{
+	content: '';
+	width: 100%;
+	position: absolute;
+	height: 100%;
+	left: 25px;
+	top: 25px;
+	background: #f3c210;
+ 	transform: translateZ(-2px);
+ 	box-shadow: 0 0 20px #f3c210;
+ 	animation: animate 3s ease-out infinite alternate;
+}
+@keyframes animate{
+	0%{
+		filter: hue-rotate(0deg);
+	}
+	100%{
+		filter: hue-rotate(360deg);
+	}
+}
+.chef .innerbox .box1 .img img{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.chef .innerbox .box2{
+	padding: 0 50px;
+}
+.chef .innerbox .box2 h2{
+	font-size: 26px;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+	font-family: 'Herr Von Muellerhoff', cursive;
+	margin-bottom: 30px;
+	color: goldenrod;
+}
+.chef .innerbox .box2 h2::first-letter{
+	font-size: 50px;
+}
+.chef .innerbox .box2 p{
+	line-height: 28px;
+	font-size: 18px;
+	letter-spacing: 2px;
+}
+
+@media screen and (max-width: 1360px){
+	body > section.chef > div.innerbox{
+		width: 90%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	body > section.chef > div > div.box1{
+		transform: scale(0.5);
+	}
+	.chef .innerbox .box2 h2{
+		font-size: 20px;
+		margin-bottom: 15px;
+	}
+	.chef .innerbox .box2 {
+		width: 100%;
+		position: relative;
+		margin-bottom: 100px;
+	}
+}
+@media screen and (max-width: 1360px){
+	.chef .innerbox{
+		margin-top: 100px;
+	}
+	.chef .innerbox .box2{
+		margin-top: -60px;
+	}
+	.chef .innerbox .box2 p{
+		font-size: 14px;
+	}
+	.chef .innerbox .box2 h2{
+		font-size: 17px;
+	}
+	.chef .innerbox .box2 h2::first-letter{
+		font-size: 25px;
+	}
+}
+
+
+/*============================================================*/
+.delight{
+	background: #fff;
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 70px 0;
+}
+.delight .innerbox{
+	width: 80%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row-reverse;
+}
+.delight .innerbox .box1,
+.delight .innerbox .box2{
+	width: 50%;
+	height: 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.delight .innerbox .box1 .img{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.delight .innerbox .box1 .img img{
+	width: 200px;
+	object-fit: contain;
+	margin: 0 10px;
+}
+.delight .innerbox .box2{
+	flex-direction: column;
+	padding: 0 30px;
+}
+.delight .innerbox .box2 h2{
+	font-size: 26px;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+	font-family: 'Herr Von Muellerhoff', cursive;
+	margin-bottom: 30px;
+	color: goldenrod;
+}
+.delight .innerbox .box2 h2::first-letter{
+	font-size: 70px;
+}
+.delight .innerbox .box2 p{
+	line-height: 28px;
+	font-size: 18px;
+	letter-spacing: 2px;
+}
+
+@media screen and (max-width: 1010px){
+	body > section.delight > div.innerbox{
+		width: 90%;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+	}
+	.delight .innerbox .box2{
+		position: relative;
+		width: 100%;
+	}
+	.delight .innerbox .box1 .img img{
+		position: absolute;
+	}
+	.delight .innerbox .box2 h2{
+		font-size: 20px;
+		margin-top: 40px
+	}
+	.delight .innerbox .box2 h2::first-letter{
+		font-size: 35px;
+	}
+	.delight .innerbox .box2 p{
+		font-size: 14px;
+	}
+}
+@media screen and (max-width: 470px){
+	.delight{
+		background: transparent;
+	}
+	.delight .innerbox{
+		margin-top: 350px;
+	}
+	.delight .innerbox .box2{
+		margin-top: 80px;
+	}
+}
+
+
+@media screen and (min-width: 500px){
+	footer{
+		margin-top: 50px !important;
+	}
+}

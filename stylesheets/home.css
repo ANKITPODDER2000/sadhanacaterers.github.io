@@ -1,0 +1,853 @@
+@import url('https://fonts.googleapis.com/css?family=Herr+Von+Muellerhoff&display=swap');
+/*font-family: 'Herr Von Muellerhoff', cursive;*/
+*{
+	margin: 0;
+	padding: 0;
+	--maincolor:#ff05c3;
+}
+body,html{
+	position: relative;
+	width: 100%;
+	overflow-x: hidden;
+}
+header{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+header .box1{
+	position: relative;
+	width: 80%;
+	height: 100%;
+	background: #fff;
+	padding-left: 100px;
+}
+
+header .box1 .box-head-menu{
+	position: relative;
+	margin-top: 170px;
+	width: 600px;
+}
+header .box1 .box-head-menu h1.menu-name{
+	font-size: 50px;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+header .box1 h1.op{
+	width: 100%;
+	font-size: 150px;
+	position: absolute;
+	bottom: 50px;
+	left: 0;
+	text-align: center;
+	opacity: 0.05;
+}
+header .box1 .box-head-menu h2{
+	font-weight: bolder;
+	font-size: 30px;
+	text-transform: uppercase;
+	margin-bottom: 25px;
+}
+header .box1 .box-head-menu p{
+	line-height: 26px;
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+header .box1 .boxbtn a{
+	position: absolute;
+	padding: 10px 20px;
+	z-index: 1;
+	text-decoration: none;
+	color: #000;
+	font-size: 18px;
+	font-weight: bolder;
+}
+header .box1 .boxbtn a::before{
+	content: '';
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background: var(--maincolor);
+	z-index: -1;
+	transition: 0.5s;
+}
+header .box1 .boxbtn a:hover::before{
+	left: 50%;
+}
+header .box1 .icon{
+	position: absolute;
+	bottom: 50px;
+	left: 0;
+	width: 400px;
+	height: 40px;
+	transform: rotate(-90deg) translateX(200px) translateY(-150px);
+	display: flex;
+	align-items: center;
+}
+header .box1 .icon a{
+	text-decoration: none;
+	margin: 0 10px;
+	font-size: 18px;
+	text-align: center;
+	color: #000;
+	transition: 0.5s;
+}
+header .box1 .icon a:hover{
+	transform: scale(1.2);
+}
+header .box2{
+	position: relative;
+	width: 20%;
+	height: 100%;
+	background: #a9a9a96e;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+header .box2 div.img-container{
+	width: 300px;
+	height: 300px;
+	position: relative;
+	left: -150px;
+	display: flex;
+	flex-direction: row;
+	overflow: hidden;
+}
+header .box2 div.img-container img{
+	transition: 0.5s;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+header .box2 .icon{
+	position: relative;
+	width: 100%;
+	left: -50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+}
+header .box2 .icon i{
+	margin: 0 25px;
+	font-size: 26px;
+	cursor: pointer;
+	transition: 0.5s;
+}
+header .box2 .icon i.active{
+	color: grey;
+}
+					/*============Responsive Header=================*/
+@media screen and (max-width: 1299px){
+	body > header > div.box1 > h1.op{
+		font-size: 100px;
+	}
+}
+@media screen and (max-width: 1150px){
+	body > header > div.box1 > div.box-head-menu > h1.menu-name{
+		font-size: 40px;
+	}
+	body > header > div.box1 > div.box-head-menu > p{
+		width: 400px;
+	}
+}
+
+
+
+@media screen and (max-width: 906px){
+	body > header > div.box1 > h1.op{
+		font-size: 60px;
+	}
+}
+
+
+
+
+@media screen and (max-width: 960px){
+	body > header{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column-reverse;
+	}
+	body > header > div.box2{
+		position: relative;
+		width: 100%;
+		height: 200px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	body > header > div.box2 > div.img-container{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%);
+	}
+	body > header > div.box2 > div.img-container img{
+		width: 100%;
+		height: 200px;
+	}
+	body > header > div.box2 > div.icon{
+		position: absolute;
+		width: 100%;
+		height: auto;
+		left: 0;
+		transform: translateY(200px);
+	}
+	body > header > div.box1{
+		padding: 0;
+		margin: 0;
+	}
+	body > header > div.box1 > div.box-head-menu{
+		margin-top: 180px;
+		width: 100%;
+	}
+	body > header > div.box1 > div.icon{
+		transform: rotate(0deg) translateY(30px);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	body > header > div.box1 > div.box-head-menu > h1.menu-name{
+		font-size: 28px;
+		text-align: center;
+	}
+	body > header > div.box1 > div.box-head-menu > h2{
+		font-size: 22px;
+		text-align: center;
+	}
+	body > header > div.box1 > div.box-head-menu > p{
+		width: 100%;
+		position: relative;
+	}
+}
+@media screen and (max-width: 500px){
+	body > header > div.box1 > h1.op{
+		font-size: 40px;
+	}
+}
+
+@media screen and (max-width: 400px){
+	body > header > div.box2 > div.img-container,
+	body > header > div.box2 > div.img-container img{
+		height: 150px;
+	}
+	body > header > div.box2 > div.icon{
+		transform: translateY(150px);
+	}
+	body > header > div.box1 > div.box-head-menu{
+		margin-top: 130px;
+	}
+	body > header > div.box1 > div.box-head-menu > h1.menu-name{
+		font-size: 22px;
+		margin-bottom: 10px;
+	}
+	body > header > div.box1 > div.box-head-menu > h2{
+		font-size: 19px;
+		margin-bottom: 10px;
+	}
+	body > header > div.box1 > div.box-head-menu > p{
+		font-size: 15px;
+	}
+	body > header > div.box1 > div.boxbtn > a{
+		transform: scale(0.9);
+	}
+	body > header > div.box1 > div.icon{
+		transform: rotate(0deg) translateY(-25px);
+	}
+	body > header > div.box1 > h1.op{
+		position: absolute;
+		bottom: 5px;
+	}
+}
+
+
+
+
+
+/*=======================================================================================*/
+
+
+
+
+.aboutus{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.aboutus .container{
+	width: 80%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: row;
+}
+.aboutus .container .box1{
+	width: 400px;
+	height: 600px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+}
+.aboutus .container .box1 h2{
+	font-family: 'Herr Von Muellerhoff', cursive;
+	font-size: 80px;
+	color: #dac242;
+}
+.aboutus .container .box1 h2::first-letter{
+	font-size: 160px;
+}
+.aboutus .container .box1 h3{
+	position: relative;
+	top: -40px;
+	font-size: 35px;
+	font-family: monospace;
+	letter-spacing: 3px;
+}
+.aboutus .container .box1 p{
+	font-size: 19px;
+	line-height: 24px;
+	font-family: inherit;
+}
+.aboutus .container .box1 a{
+	margin-top: 25px;
+	font-family: consolas;
+	letter-spacing: 3px;
+	color: #dac242;
+	text-decoration: none;
+	font-size: 24px;
+}
+.aboutus .container  .box2{
+	width: 500px;
+	height: 600px;
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+.aboutus .container .box2 img{
+	position: absolute;
+	width: 100%;
+	object-fit: contain;
+}
+					/*============Responsive AboutUs=================*/
+@media screen and (max-width: 1290px){
+	.aboutus{
+		margin-top: 60px;
+	}
+	.aboutus .container{
+		flex-direction: column;
+	}
+	body > section.aboutus{
+		margin-bottom: 80px;
+	}
+	body > section.aboutus > div.container > div.box1{
+		position: relative;
+		width: 100%;
+		margin-bottom: 80px;
+	}
+}
+@media screen and (max-width: 700px){
+	.aboutus .container .box1 h2{
+		font-size: 60px;
+	}
+	.aboutus .container .box1 h2::first-letter{
+		font-size: 90px;
+	}
+	.aboutus .container .box1 h3{
+		font-size: 24px;
+		top: -20px;
+	}
+}
+@media screen and (max-width: 550px){
+	.aboutus .container  .box2{
+		width: 320px;
+	}
+}
+@media screen and (max-width: 1300px){
+	.aboutus .container .box2{
+		width: 350px;
+	}
+}
+@media screen and (max-width: 500px){
+	body > section.aboutus{
+		margin: 0;
+	}
+	.aboutus .container{
+		width: 90%;
+	}
+	body > section.aboutus > div.container > div.box1{
+		margin-bottom: 0px;
+	}
+	.aboutus .container .box1 h2{
+		font-family: consolas;
+		font-size: 22px;
+		margin-bottom: 18px;
+	}
+	.aboutus .container .box1 h2::first-letter{
+		font-size: 44px;
+	}
+	.aboutus .container .box1 h3{
+		font-size: 19px;
+	}
+	.aboutus .container .box1 p{
+		font-size: 14px;
+	}
+}
+@media screen and (max-width: 380px){
+	.aboutus .container .box2{
+		width: 250px;
+	}
+}
+@media screen and (max-width: 290px){
+	.aboutus .container .box2{
+		width: 200px;
+	}
+}
+/*=======================================================================================*/
+.banner{
+	position: relative;
+	width: 100%;
+	height: 70vh;
+	background: url("../images/img18.jpg"); 
+	background-color: rgba(255,0,0,0.8);
+	background-repeat: no-repeat;
+	background-repeat: 50% 50%;
+	background-size: cover;
+	background-blend-mode: multiply;
+	margin-top: 150px;
+}
+.banner .box{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.banner .box h1{
+	letter-spacing: 5px;
+	font-family: 'Herr Von Muellerhoff', cursive;
+	font-size: 80px;
+	color: #dac242;
+}
+.banner .box h1::first-letter{
+	font-size: 140px;
+}
+.banner .box h2{
+	position: relative;
+	margin-top: -30px;
+	color: #fff;
+	font-size: 35px;
+	letter-spacing: 3px;
+	font-family: monospace;
+	text-align: center;
+}
+						/*============Responsive AboutUs=================*/
+@media screen and (max-width: 550px){
+	.banner .box h1{
+		font-size: 50px;
+		margin-bottom: 30px;
+	}
+	.banner .box h1::first-letter{
+		font-family: consolas;
+		font-size: 70px;
+	}
+}
+
+/*=======================================================================================*/
+/*=======================================================================================*/
+
+.menu{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+.menu .contain{
+	position: relative;
+	width: 1000px;
+	height: 90vh;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.menu .contain .pics{
+	width: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.menu .contain .pics img{
+	width: 225px;
+	height: 230px;
+	object-fit: cover;
+	margin: 10px 12px;
+	zoom: 1;
+}
+
+.menu .contain .des-menu{
+	width: 400px;
+	height: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.menu .contain .des-menu h2{
+	font-family: 'Herr Von Muellerhoff', cursive;
+	font-size: 80px;
+	color: #dac242;
+}
+.menu .contain .des-menu h2::first-letter{
+	font-size: 160px;
+}
+.menu .contain .des-menu h3{
+	position: relative;
+	top: -20px;
+	font-size: 35px;
+	font-family: monospace;
+	letter-spacing: 3px;
+}
+.menu .contain .des-menu p{
+	margin-top: -20px;
+	font-size: 19px;
+	line-height: 24px;
+	font-family: inherit;
+}
+.menu .contain .des-menu a{
+	margin-top: 25px;
+	font-family: consolas;
+	letter-spacing: 3px;
+	color: #dac242;
+	text-decoration: none;
+	font-size: 24px;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1094px){
+	.menu .contain .pics{
+		display: none;
+	}
+	.menu .contain .des-menu{
+		position: relative;
+		width: 100%;
+		height: 100%;
+		padding: 0 50px;
+	}
+	.menu .contain .des-menu h2{
+		font-size: 70px;
+	}
+	.menu .contain .des-menu h2::first-letter{
+		font-size: 100px;
+	}
+	.menu .contain .des-menu h3{
+		top: -30px;
+	}
+}
+@media screen and (max-width: 700px){
+	.menu .contain .des-menu{
+		position: relative;
+		width: 100%;
+		height: 100%;
+		padding: 0 50px;
+	}
+	.menu .contain .des-menu h2{
+		font-size: 36px;
+		font-family: consolas;
+	}
+	.menu .contain .des-menu h2::first-letter{
+		font-size: 46px;
+	}
+	.menu .contain .des-menu h3{
+		top: 0px;
+		margin-bottom: 30px;
+	}
+	.menu .contain .des-menu p{
+		font-size: 14px;
+	}
+	.menu .contain .des-menu a{
+		font-size: 16px;
+	}
+}
+
+
+
+
+
+/*=======================================================================================*/
+.review{
+	max-width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.review .container{
+	width: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.review .container .person{
+	z-index: 9999;
+	position: relative;
+	height: 400px;
+	border: 1px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 0 50px;
+}
+
+.review .container .person::before{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 30%;
+	background: yellow;
+	z-index: -1;
+	border-bottom-left-radius: 50%;
+	border-bottom-right-radius: 50%;
+	transition: 1s;
+}
+.review .container .person:hover::before{
+	height: 100%;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.review .container .person img{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	border: 1px solid black;
+	margin-bottom: 15px;
+}
+.review .container .person h3{
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+.review .container .person p{
+	line-height: 20px;
+}
+.owl-nav{
+	position: absolute;
+	width: 114%;
+	top: 50%;
+	left: -7%;
+	transform: translateY(-50%);
+	display: flex;
+	justify-content: space-between;
+}
+body > section.review > div > div.owl-nav > button.owl-prev,
+body > section.review > div > div.owl-nav > button.owl-next{
+	width: 40px;
+	margin: 0;
+	padding: 0;
+	height: 40px;
+	background: transparent;
+	border-radius: 50%;
+	border: 2px solid grey;
+	transition: 0.5s;
+	outline: none;
+}
+body > section.review > div > div.owl-nav > button.owl-prev:hover,
+body > section.review > div > div.owl-nav > button.owl-next:hover{
+	background: white;
+	border-color: black;
+}
+body > section.review > div > div.owl-nav > button.owl-prev > span,
+body > section.review > div > div.owl-nav > button.owl-next > span{
+	font-size: 24px;
+	transform: translateY(-1px);
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	font-weight: bolder;
+}
+body > section.review > div > div.owl-nav > button.owl-prev:hover > span,
+body > section.review > div > div.owl-nav > button.owl-next:hover > span{
+	color: black;
+}
+body > section.review > div > div.owl-dots{
+	display: none;
+}
+@media screen and (max-width: 553px){
+	body > section.review > div > div.owl-nav{
+		display: none;
+	}
+	.review .container .person{
+		transform: scale(0.8);
+	}
+}
+/*=============================================================================*/
+
+.contact{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.contact .contain{
+	position: relative;
+	width: 80%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.contact .contain .box1{
+	height: 100%;
+	width: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.contact .contain .box1 img{
+	width: 500px;
+	object-fit: contain;
+}
+
+
+.contact .contain .box2{
+	width: 700px;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.contact .contain .box2 form{
+	width: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.contact .contain .box2 form .inputbox{
+	position: relative;
+	width: 250px;
+	height: 30px;
+	margin: 15px 0;
+}
+.contact .contain .box2 form .inputbox input{
+	display: block;
+	width: 100%;
+	position: relative;
+	background: transparent;
+	border: none;
+	border-bottom: 2px solid black;
+	outline: none;
+	padding: 0 10px 5px 10px;
+	font-size: 18px;
+	letter-spacing: 2px;
+	font-family: consolas;
+}
+.contact .contain .box2 form .inputbox .underline{
+	position: absolute;
+	bottom: 2px;
+	width: 270px;
+	height: 2px;
+	background: var(--maincolor);
+	transform-origin: left;
+	transform: scaleX(0);
+	transition: 0.6s;
+}
+.contact .contain .box2 form .inputbox label{
+	position: absolute;
+	top: 1px;
+	left: 10px;
+	font-family: sans-serif;
+	font-size: 20px;
+	z-index: -1;
+	transition: 0.5s;
+	font-weight: bolder;
+}
+.contact .contain .box2 form .inputbox input:focus ~ label,
+.contact .contain .box2 form .inputbox input:valid ~ label{
+	top: -20px;
+	left: 0px;
+	font-size: 16px;
+	font-weight: bold;
+	color: var(--maincolor);
+}
+.contact .contain .box2 form .inputbox input:focus ~ .underline,
+.contact .contain .box2 form .inputbox input:valid ~ .underline{
+	transform: scaleX(1);
+	transform-origin: right;
+	transition: 0.5s;
+}
+.contact .contain .box2 form .inputbox button{
+	width: 270px;
+	height: 30px;
+	border: none;
+	background: none;
+	outline: none;
+	border: 2px solid var(--maincolor);
+	color: var(--maincolor);
+	font-weight: bolder;
+	transition: 0.5s;
+	letter-spacing: 2px;
+}
+.contact .contain .box2 form .inputbox button:hover{
+	background: var(--maincolor);
+	color: white;
+}
+body > section.contact > div > div.box2 > form > h1{
+	margin-bottom: 10px;
+	letter-spacing: 2px;font-family: 'Herr Von Muellerhoff', cursive;
+	font-size: 60px;
+	color: #dac242;
+}
+body > section.contact > div > div.box2 > form > h1::first-letter{
+	font-size: 100px;
+}
+@media screen and (max-width: 900px){
+	.contact .contain .box1{
+		position: absolute;
+		width: 100%;
+		z-index: -1;
+		opacity: 0.3;
+	}
+	.contact .contain .box1 img{
+		position: relative;
+		width: 100%;
+	}
+	.contact .contain .box2{
+		width: 360px;
+	}
+	.contact .contain .box2 form{
+		width: 340px;
+	}
+}
+@media screen and (max-width: 360px){
+	body > section.contact > div > div.box2 > form{
+		transform: scale(0.8);
+	}
+}

@@ -1,0 +1,116 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body,html{
+	position: relative;
+	width: 100%;
+	overflow-x: hidden;
+}
+.container{
+	position: relative;
+	width: 100%;
+	margin-top: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	z-index: 0;
+}
+
+.container .menu{
+	position: relative;
+	width: 80%;
+	height: 60px;
+	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 40px;
+}
+.container .menu ul{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+}
+.container .menu ul li{
+	list-style-type: none;
+	margin: 0 10px;
+	padding: 10px 20px;
+	border: 1px solid #ff05c3;
+	border-radius: 5px;
+	transition: .5s;
+	cursor: pointer;
+	z-index: 99999;
+	font-family: consolas;
+}
+
+.container .menu ul li.active,
+.container .menu ul li:hover{
+	background: #ff05c3;
+	color: #fff;
+}
+.container .menu-item{
+	position: relative;
+	min-height: 100vh;
+	width: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+.container .menu-item .item{
+	position: relative;
+	width: 20%;
+	height: 300px;
+	margin: 30px calc(20% / 8);
+}
+.container .menu-item .item img{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+@media screen and (max-width: 1400px){
+	.container .menu-item .item{
+		width: 40%;
+		margin: 30px calc(20% / 4);
+	}
+}
+@media screen and (max-width: 1030px){
+	.container .menu-item .item{
+		width: 60%;
+		margin: 20px 20%;
+	}
+}
+@media screen and (max-width: 700px){
+	.container .menu-item .item{
+		width: 80%;
+		margin: 20px 10%;
+	}
+	.container .menu{
+		height: 300px;
+	}
+	.container .menu ul{
+		flex-direction: column;
+	}
+	.container .menu ul li{
+		width: 80%;
+		margin: 5px 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+
+@media screen and (max-width: 400px){
+	.container .menu-item .item{
+		width: 100%;
+		margin: 20px 0%;
+	}
+}
